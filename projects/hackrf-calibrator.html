@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HackRF Crystal Calibrator — Jessica Chen</title>
+<meta name="description" content="Calibrating a software-defined radio&#x27;s crystal oscillator via LTE cell search, after finding a large frequency offset while spoofing GPS.">
+<meta property="og:title" content="HackRF Crystal Calibrator — Jessica Chen">
+<meta property="og:description" content="Calibrating a software-defined radio&#x27;s crystal oscillator via LTE cell search, after finding a large frequency offset while spoofing GPS.">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header class="site">
+  <p class="name"><a href="../index.html">Jessica Chen</a></p>
+  <nav class="site">
+        <a href="../index.html">About</a>
+        <a href="../research.html">Research</a>
+        <a href="../projects.html" aria-current="page">Projects</a>
+        <a href="../writing.html">Writing</a>
+        <a href="../cv.html">CV</a>
+  </nav>
+</header>
+
+<main>
+<h1>HackRF Crystal Calibrator</h1>
+<p class="meta muted small">Build · Personal project · 2021-05</p>
+<div class="links" style="margin-bottom:1.5rem"></div><h2 id="what-happened">What happened</h2>
+<p>While spoofing GPS signals with a HackRF One and a custom GNU Radio flowgraph, I
+found a large frequency offset — the device&rsquo;s crystal oscillator was off enough
+to break the work. Rather than eyeball a correction, I built a tool that
+calibrates the crystal by searching for LTE cells, whose carriers are
+tightly specified and can serve as a frequency reference.</p>
+<p>[TODO: how far off was it, and how close did calibration get you?]</p>
+<p class="backlink"><a href="../projects.html">← All projects</a></p>
+</main>
+
+<footer class="site">
+      <a href="mailto:jessica@agihouse.org">Email</a>
+      <a href="https://github.com/JessSanChen">GitHub</a>
+      <a href="https://arxiv.org/a/chen_j_1">arXiv</a>
+      <a href="https://blog.agihouse.org/team-members/jessica-chen">AGI House</a>
+</footer>
+
+</body>
+</html>

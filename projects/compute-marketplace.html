@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Multi-Dimensional Preference Ordering for a Stable Compute Marketplace — Jessica Chen</title>
+<meta name="description" content="Matching stability decays exponentially in preference-report noise — and stability turns out not to predict social welfare.">
+<meta property="og:title" content="Multi-Dimensional Preference Ordering for a Stable Compute Marketplace — Jessica Chen">
+<meta property="og:description" content="Matching stability decays exponentially in preference-report noise — and stability turns out not to predict social welfare.">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header class="site">
+  <p class="name"><a href="../index.html">Jessica Chen</a></p>
+  <nav class="site">
+        <a href="../index.html">About</a>
+        <a href="../research.html">Research</a>
+        <a href="../projects.html" aria-current="page">Projects</a>
+        <a href="../writing.html">Writing</a>
+        <a href="../cv.html">CV</a>
+  </nav>
+</header>
+
+<main>
+<h1>Multi-Dimensional Preference Ordering for a Stable Compute Marketplace</h1>
+<p class="meta muted small">Research · CS 236r, Harvard · 2024-12</p>
+<div class="links" style="margin-bottom:1.5rem"><a href="../files/compute-marketplace.pdf">PDF</a><a href="https://github.com/JessSanChen/computatemarketplace">Code</a></div><p><strong>Jessica Chen, Gary Wu.</strong> <em>CS 236r, Harvard.</em></p>
+<h2 id="summary">Summary</h2>
+<p>Proposals for compute marketplaces (DeepMarket, CrowdFL) sketch the architecture
+but leave the pricing and matching algorithms unspecified — which is where the
+difficulty actually lives. Training jobs have complex, multi-dimensional
+requirements, so users can&rsquo;t be expected to report a clean preference ordering
+over asking price and training duration.</p>
+<p>We model users reporting multi-dimensional preferences with stochastic noise and
+indifference groups, and measure what that does to a Gale–Shapley market.</p>
+<p><strong>Three results:</strong> stability rates decay exponentially in both report noise and
+indifference-group size; stability does <em>not</em> predict social welfare in this
+system; and collapsing multi-dimensional preferences to one dimension before
+matching reliably generates marketplace revenue.</p>
+<p>The middle result is the interesting one — stability is the standard objective in
+matching-market design, and here it comes apart from the thing you actually care
+about. Lead with it.</p>
+<h2 id="my-contribution">My contribution</h2>
+<p>[TODO]</p>
+<p class="backlink"><a href="../projects.html">← All projects</a></p>
+</main>
+
+<footer class="site">
+      <a href="mailto:jessica@agihouse.org">Email</a>
+      <a href="https://github.com/JessSanChen">GitHub</a>
+      <a href="https://arxiv.org/a/chen_j_1">arXiv</a>
+      <a href="https://blog.agihouse.org/team-members/jessica-chen">AGI House</a>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Spike Sorting and Functional Connectivity Reconstruction from Flexible Mesh Probes — Jessica Chen</title>
+<meta name="description" content="Rebuilt the lab&#x27;s electrophysiology pipeline in SpikeInterface and used GLMCC to infer monosynaptic connections from chronically recorded mouse motor cortex.">
+<meta property="og:title" content="Spike Sorting and Functional Connectivity Reconstruction from Flexible Mesh Probes — Jessica Chen">
+<meta property="og:description" content="Rebuilt the lab&#x27;s electrophysiology pipeline in SpikeInterface and used GLMCC to infer monosynaptic connections from chronically recorded mouse motor cortex.">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header class="site">
+  <p class="name"><a href="../index.html">Jessica Chen</a></p>
+  <nav class="site">
+        <a href="../index.html">About</a>
+        <a href="../research.html">Research</a>
+        <a href="../projects.html" aria-current="page">Projects</a>
+        <a href="../writing.html">Writing</a>
+        <a href="../cv.html">CV</a>
+  </nav>
+</header>
+
+<main>
+<h1>Spike Sorting and Functional Connectivity Reconstruction from Flexible Mesh Probes</h1>
+<p class="meta muted small">Research · Jia Liu Lab of Bioelectronics, Harvard SEAS · 2022-12</p>
+<div class="links" style="margin-bottom:1.5rem"></div><p><strong>Jessica Chen.</strong> <em>Machine learning research assistant, <a href="https://liulab.seas.harvard.edu/">Jia Liu Lab of Bioelectronics</a>,
+Harvard SEAS. February 2022 – early 2023.</em></p>
+<div class="callout">
+<p>No paper came out of this — it was undergraduate research assistance, and I'm
+presenting it as that. What it produced was working pipeline code and a set of
+analyses, which is the honest description.</p>
+</div>
+
+<h2 id="context">Context</h2>
+<p>The lab builds flexible, tissue-embedded mesh electronics that record from the
+same neurons over long timescales without the glial scarring that displaces
+rigid probes. That stability is the point: it makes it possible to ask what a
+population of neurons does across weeks rather than a single session.</p>
+<p>I worked on the analysis side of that data.</p>
+<h2 id="electrophysiology-pipeline">Electrophysiology pipeline</h2>
+<p>The experimental preparation was a head-fixed, water-restricted mouse trained to
+pull a joystick past a threshold for a sweetened-water reward, with 32-channel
+Intan recordings running alongside the behavioral signal.</p>
+<p>I inherited a MATLAB preprocessing pipeline, audited which recording sessions
+had complete variable sets, fixed a reshape bug in the trial-segmentation step,
+and then <strong>rebuilt the pipeline in Python on SpikeInterface</strong> against the lab&rsquo;s
+<code>mesh_probe</code> geometry — running MountainSort and Kilosort and then manually
+curating the output unit-by-unit on waveform shape, merging over-split units and
+dropping noise clusters across sessions.</p>
+<p>Manual curation is unglamorous and it&rsquo;s where most of the real judgment in
+extracellular ephys lives. [TODO: one sentence on what you learned about when to
+trust an automated sorter — that&rsquo;s the interesting takeaway.]</p>
+<h2 id="functional-connectivity">Functional connectivity</h2>
+<p>With sorted spike trains, I moved to <strong>GLMCC</strong> (Kobayashi et al., <em>Nature
+Communications</em> 2019), which fits a GLM to the cross-correlogram between neuron
+pairs to estimate monosynaptic connection strength in PSP units and separate
+true synaptic coupling from correlation driven by shared input.</p>
+<p>I got the reference implementation running on the lab&rsquo;s data and tuned the
+correlogram window and bin width for our sampling rate, recovering candidate
+excitatory connections between units. <strong>Parameter tuning wasn&rsquo;t finished</strong> — the
+defaults are set for a different recording regime, and identifying the right
+ones for chronic mesh-probe data was where I left off.</p>
+<p>I also evaluated a <strong>second-order memristor array</strong> (tantalum-oxide, where the
+device&rsquo;s internal temperature state gives native STDP) as a real-time
+alternative to GLM-based reconstruction for high-channel-count recordings.</p>
+<h2 id="spatial-transcriptomics">Spatial transcriptomics</h2>
+<p>My first semester was on the lab&rsquo;s other side: graph-attention autoencoders for
+spatially resolved transcriptomics. I presented STAGATE and DeepMAPS at journal
+club and wrote a [PRISE] proposal to extend the lab&rsquo;s STARmap/ClusterMap work to
+ligand–receptor cell–cell interaction using transformers. The proposal didn&rsquo;t
+turn into a finished project.</p>
+<h2 id="why-this-is-on-the-site">Why this is on the site</h2>
+<p>[Suggestion, in your words: population recordings and artificial networks pose
+the same inference problem — you observe activity and have to recover the
+computation, without access to the source code. Spike sorting, connectivity
+inference from correlational data, and knowing when a method is telling you
+about the system versus about your preprocessing are the same skills
+interpretability work needs.]</p>
+<p class="backlink"><a href="../projects.html">← All projects</a></p>
+</main>
+
+<footer class="site">
+      <a href="mailto:jessica@agihouse.org">Email</a>
+      <a href="https://github.com/JessSanChen">GitHub</a>
+      <a href="https://arxiv.org/a/chen_j_1">arXiv</a>
+      <a href="https://blog.agihouse.org/team-members/jessica-chen">AGI House</a>
+</footer>
+
+</body>
+</html>

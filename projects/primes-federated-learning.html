@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PRIMES — Incentive-Aligned Agent Selection for Federated Learning — Jessica Chen</title>
+<meta name="description" content="Paying federated clients on global performance rather than selection makes truthful reporting the best response — and converges 10–33% faster.">
+<meta property="og:title" content="PRIMES — Incentive-Aligned Agent Selection for Federated Learning — Jessica Chen">
+<meta property="og:description" content="Paying federated clients on global performance rather than selection makes truthful reporting the best response — and converges 10–33% faster.">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header class="site">
+  <p class="name"><a href="../index.html">Jessica Chen</a></p>
+  <nav class="site">
+        <a href="../index.html">About</a>
+        <a href="../research.html">Research</a>
+        <a href="../projects.html" aria-current="page">Projects</a>
+        <a href="../writing.html">Writing</a>
+        <a href="../cv.html">CV</a>
+  </nav>
+</header>
+
+<main>
+<h1>PRIMES — Incentive-Aligned Agent Selection for Federated Learning</h1>
+<p class="meta muted small">Research · CS 243, Harvard · 2023-12</p>
+<div class="links" style="margin-bottom:1.5rem"><a href="../files/primes.pdf">PDF</a><a href="https://github.com/JessSanChen/">Code</a></div><p><strong>Jessica Chen, Jared Ni, Gary Wu.</strong> <em>CS 243, Harvard.</em></p>
+<h2 id="summary">Summary</h2>
+<p>Federated learning assumes clients honestly do the work. They have no reason to.
+A client that free-rides — training on corrupt data, or barely training at all —
+still receives the final global model. Prior work on participant selection (Oort
+and successors) optimizes <em>which</em> clients to pick for efficiency, but treats
+their reports as truthful.</p>
+<p>PRIMES changes what clients are paid for. Selection is on next-step loss, but
+payment is a function of performance on global test data. Because payment
+follows global performance rather than selection, misreporting to get selected
+stops being profitable and truthful reporting becomes the best response.</p>
+<p>We implemented it on Flower FL with a separate gRPC back-channel for the
+incentive layer. Against random selection and Oort&rsquo;s clipping method, PRIMES
+reaches <strong>1.5–2× accuracy per round</strong> and converges <strong>10–33% faster</strong> across
+client populations with varying degrees of data corruption.</p>
+<h2 id="why-this-one-matters">Why this one matters</h2>
+<p>[This is your strongest unpublished piece — mechanism design plus a working
+distributed implementation plus baselines you beat. Expand the method section
+and add the convergence figure. Worth a workshop submission.]</p>
+<h2 id="my-contribution">My contribution</h2>
+<p>[TODO]</p>
+<p class="backlink"><a href="../projects.html">← All projects</a></p>
+</main>
+
+<footer class="site">
+      <a href="mailto:jessica@agihouse.org">Email</a>
+      <a href="https://github.com/JessSanChen">GitHub</a>
+      <a href="https://arxiv.org/a/chen_j_1">arXiv</a>
+      <a href="https://blog.agihouse.org/team-members/jessica-chen">AGI House</a>
+</footer>
+
+</body>
+</html>

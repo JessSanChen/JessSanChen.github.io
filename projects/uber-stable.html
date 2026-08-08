@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Uber Stable — Formulating the Rideshare System as a Stable Matching Problem — Jessica Chen</title>
+<meta name="description" content="Deferred acceptance applied to rider–driver matching, trading system efficiency against equitable driver income.">
+<meta property="og:title" content="Uber Stable — Formulating the Rideshare System as a Stable Matching Problem — Jessica Chen">
+<meta property="og:description" content="Deferred acceptance applied to rider–driver matching, trading system efficiency against equitable driver income.">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header class="site">
+  <p class="name"><a href="../index.html">Jessica Chen</a></p>
+  <nav class="site">
+        <a href="../index.html">About</a>
+        <a href="../research.html">Research</a>
+        <a href="../projects.html" aria-current="page">Projects</a>
+        <a href="../writing.html">Writing</a>
+        <a href="../cv.html">CV</a>
+  </nav>
+</header>
+
+<main>
+<h1>Uber Stable — Formulating the Rideshare System as a Stable Matching Problem</h1>
+<p class="meta muted small">Publication · EAAMO 2024 (ACM Conf. on Equity and Access in Algorithms, Mechanisms, and Optimization) — from CS 136 · 2023-12</p>
+<div class="links" style="margin-bottom:1.5rem"><a href="https://arxiv.org/abs/2403.13083">arXiv</a><a href="../files/uberstable.pdf">PDF</a><a href="https://github.com/JessSanChen/">Code</a></div><p><strong>Rhea Acharya, Jessica Chen, Helen Xiao.</strong> <em>Published at EAAMO 2024. arXiv:2403.13083 [cs.MA], March 2024. Originating in CS 136, Economics and Computation.</em></p>
+<h2 id="summary">Summary</h2>
+<p>Rideshare platforms are, underneath the app, a bipartite matching problem between
+riders and drivers — but the matching is usually run greedily on proximity, which
+quietly concentrates income among drivers who happen to sit in attractive
+locations. We apply the Gale–Shapley deferred acceptance algorithm to a static
+matching repeated over time periods, with preferences built from passenger
+willingness-to-pay, driver preferences, and location attractiveness, and compare
+against random and closest-driver matching.</p>
+<p>We compare against random matching, closest-neighbour matching, and the Boston mechanism, on total revenue, revenue per ride, and the standard deviation of driver income — and examine what happens when the system prioritizes proximity to passengers versus distance from city centre.</p>
+<p>[TODO: add the headline numbers — how much driver income inequality falls, and
+what it costs in total system revenue. That tradeoff is the paper&rsquo;s point and it
+should be in this paragraph.]</p>
+<h2 id="my-contribution">My contribution</h2>
+<p>[TODO: state plainly which parts were yours.]</p>
+<p class="backlink"><a href="../projects.html">← All projects</a></p>
+</main>
+
+<footer class="site">
+      <a href="mailto:jessica@agihouse.org">Email</a>
+      <a href="https://github.com/JessSanChen">GitHub</a>
+      <a href="https://arxiv.org/a/chen_j_1">arXiv</a>
+      <a href="https://blog.agihouse.org/team-members/jessica-chen">AGI House</a>
+</footer>
+
+</body>
+</html>

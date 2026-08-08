@@ -1,0 +1,243 @@
+/* ============================================================
+   Academic minimal — single stylesheet, no framework.
+   Edit the variables below to restyle the whole site.
+   ============================================================ */
+
+:root {
+  --measure: 42rem;              /* content width */
+  --ink:        #17171a;
+  --ink-soft:   #55555e;
+  --ink-faint:  #8a8a93;
+  --bg:         #fdfcfa;
+  --bg-soft:    #f4f2ee;
+  --rule:       #e3e0d9;
+  --accent:     #1e4f8f;
+  --accent-bg:  #e8eef7;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ink:       #e8e6e1;
+    --ink-soft:  #a8a6a1;
+    --ink-faint: #75736f;
+    --bg:        #16161a;
+    --bg-soft:   #1e1e23;
+    --rule:      #2e2e35;
+    --accent:    #8ab4e8;
+    --accent-bg: #1b2836;
+  }
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  padding: 0 1.5rem 6rem;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: Charter, "Bitstream Charter", "Sitka Text", Cambria, Georgia, serif;
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  font-kerning: normal;
+  text-rendering: optimizeLegibility;
+}
+
+.wrap { max-width: var(--measure); margin: 0 auto; }
+
+/* ---------- Header / nav ---------- */
+
+header.site {
+  max-width: var(--measure);
+  margin: 0 auto;
+  padding: 2.75rem 0 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem 1.5rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+header.site .name {
+  font-size: 1.0625rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  margin: 0;
+}
+header.site .name a { color: var(--ink); text-decoration: none; }
+
+nav.site { margin-left: auto; display: flex; gap: 1.25rem; }
+nav.site a {
+  font-size: 0.9375rem;
+  color: var(--ink-soft);
+  text-decoration: none;
+  padding-bottom: 2px;
+  border-bottom: 1px solid transparent;
+}
+nav.site a:hover { color: var(--ink); border-bottom-color: var(--rule); }
+nav.site a[aria-current="page"] { color: var(--ink); border-bottom-color: var(--ink); }
+
+main { max-width: var(--measure); margin: 0 auto; }
+
+/* ---------- Typography ---------- */
+
+h1 {
+  font-size: 1.75rem;
+  line-height: 1.25;
+  font-weight: 600;
+  letter-spacing: -0.012em;
+  margin: 2.75rem 0 0.75rem;
+}
+
+h2 {
+  font-size: 1.1875rem;
+  font-weight: 600;
+  letter-spacing: -0.005em;
+  margin: 2.75rem 0 0.6rem;
+}
+
+h3 {
+  font-size: 1.0625rem;
+  font-weight: 600;
+  margin: 1.75rem 0 0.35rem;
+}
+
+p { margin: 0 0 1.05rem; }
+
+a { color: var(--accent); text-decoration: none; border-bottom: 1px solid color-mix(in srgb, var(--accent) 30%, transparent); }
+a:hover { border-bottom-color: var(--accent); }
+
+.lede { font-size: 1.125rem; color: var(--ink); }
+
+.muted { color: var(--ink-soft); }
+.small { font-size: 0.9375rem; }
+
+hr { border: 0; border-top: 1px solid var(--rule); margin: 2.5rem 0; }
+
+ul, ol { margin: 0 0 1.05rem; padding-left: 1.25rem; }
+li { margin-bottom: 0.3rem; }
+
+blockquote {
+  margin: 1.5rem 0;
+  padding-left: 1.1rem;
+  border-left: 2px solid var(--rule);
+  color: var(--ink-soft);
+}
+
+code, pre {
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.875em;
+}
+code { background: var(--bg-soft); padding: 0.12em 0.35em; border-radius: 3px; }
+pre {
+  background: var(--bg-soft);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: 0.9rem 1rem;
+  overflow-x: auto;
+  line-height: 1.5;
+}
+pre code { background: none; padding: 0; }
+
+/* ---------- Entry lists (projects, publications, writing) ---------- */
+
+.entries { margin: 1.5rem 0 0; }
+
+.entry {
+  padding: 1.15rem 0;
+  border-top: 1px solid var(--rule);
+}
+.entry:last-child { border-bottom: 1px solid var(--rule); }
+
+.entry h3 { margin: 0 0 0.2rem; font-size: 1.0625rem; }
+.entry h3 a { color: var(--ink); border-bottom-color: var(--rule); }
+.entry h3 a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+.entry .meta {
+  font-size: 0.875rem;
+  color: var(--ink-faint);
+  margin: 0 0 0.4rem;
+  font-variant-numeric: tabular-nums;
+}
+.entry p.blurb { margin: 0 0 0.5rem; color: var(--ink-soft); font-size: 1rem; }
+
+.links { font-size: 0.875rem; display: flex; flex-wrap: wrap; gap: 0.9rem; }
+.links a { border-bottom: none; color: var(--accent); }
+.links a:hover { border-bottom: 1px solid var(--accent); }
+
+/* Small caps-ish label for kind of artifact */
+.tag {
+  display: inline-block;
+  font-size: 0.6875rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--accent);
+  background: var(--accent-bg);
+  padding: 0.15rem 0.45rem;
+  border-radius: 3px;
+  vertical-align: 0.12em;
+  margin-left: 0.45rem;
+}
+
+/* ---------- CV-style two column rows ---------- */
+
+.row {
+  display: grid;
+  grid-template-columns: 7rem 1fr;
+  gap: 0 1.25rem;
+  padding: 0.85rem 0;
+  border-top: 1px solid var(--rule);
+}
+.row:last-child { border-bottom: 1px solid var(--rule); }
+.row .when { color: var(--ink-faint); font-size: 0.875rem; font-variant-numeric: tabular-nums; padding-top: 0.15rem; }
+.row .what strong { font-weight: 600; }
+.row .what p { margin: 0.15rem 0 0; color: var(--ink-soft); font-size: 0.9375rem; }
+
+@media (max-width: 34rem) {
+  .row { grid-template-columns: 1fr; gap: 0.15rem; }
+}
+
+/* ---------- Footer ---------- */
+
+footer.site {
+  max-width: var(--measure);
+  margin: 4rem auto 0;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--rule);
+  font-size: 0.875rem;
+  color: var(--ink-faint);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.25rem;
+}
+footer.site a { color: var(--ink-soft); border-bottom: none; }
+footer.site a:hover { color: var(--accent); }
+
+/* ---------- Utilities ---------- */
+
+.figure { margin: 1.75rem 0; }
+.figure img { max-width: 100%; height: auto; border: 1px solid var(--rule); border-radius: 4px; display: block; }
+.figure figcaption { font-size: 0.875rem; color: var(--ink-faint); margin-top: 0.5rem; }
+
+.callout {
+  background: var(--bg-soft);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: 0.9rem 1.1rem;
+  font-size: 0.9375rem;
+  color: var(--ink-soft);
+  margin: 1.5rem 0;
+}
+.callout p:last-child { margin-bottom: 0; }
+
+.backlink { font-size: 0.875rem; display: inline-block; margin-top: 2.5rem; }
+
+/* Print — makes Cmd-P a usable one-page CV */
+@media print {
+  body { font-size: 10.5pt; padding: 0; background: #fff; color: #000; }
+  header.site nav, footer.site, .backlink { display: none; }
+  a { color: #000; border-bottom: none; }
+  .entry, .row { break-inside: avoid; }
+}
