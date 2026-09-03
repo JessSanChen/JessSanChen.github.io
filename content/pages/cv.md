@@ -14,15 +14,23 @@ description: Curriculum vitae.
 
 <div class="row"><div class="when">2017–2021</div><div class="what"><strong>Thomas Jefferson High School for Science and Technology</strong> — Alexandria, VA</div></div>
 
+## Publications
+
+<div class="row"><div class="when">2024</div><div class="what"><strong>Uber Stable: Formulating the Rideshare System as a Stable Matching Problem</strong><p>Rhea Acharya, <strong>Jessica Chen</strong>, Helen Xiao. <em>ACM Conference on Equity and Access in Algorithms, Mechanisms, and Optimization (EAAMO 2024)</em>. arXiv:2403.13083. [<a href="https://arxiv.org/abs/2403.13083">arXiv</a>] [<a href="files/uberstable.pdf">pdf</a>]</p></div></div>
+
+## Research
+
+<div class="row"><div class="when">2022–2023</div><div class="what"><strong>ML Research Assistant — Jia Liu Lab of Bioelectronics, Harvard SEAS</strong><p>Spike sorting and functional-connectivity reconstruction from chronic 32-channel flexible mesh probe recordings; spatial-transcriptomics reading and journal club. <a href="projects/jia-liu-lab.html">Details</a>.</p></div></div>
+
+<div class="row"><div class="when">2019</div><div class="what"><strong>Research Mentee — Georgetown University</strong><p>Neuroanatomical circuit tracing with Drs. Niaz Sahibzada and Lorenza Bellusci, through the TJHSST Mentorship Program. <a href="projects/sst-neuroanatomy.html">Details</a>.</p></div></div>
+
 ## Experience
 
 <div class="row"><div class="when">2026–</div><div class="what"><strong>Lead Researcher — AGI House</strong><p>Write the organization's research briefs on the frontier AI stack ([23] published). Run interviews, firesides, reading groups, and build days with researchers from OpenAI, Google DeepMind, and NVIDIA.</p></div></div>
 
-<div class="row"><div class="when">2025–2026</div><div class="what"><strong>Restructuring Analyst — Lazard</strong> · Chicago<p>Distressed and special-situations advisory. [One line on deal scale and the modeling you owned.]</p></div></div>
-
 <div class="row"><div class="when">2025–</div><div class="what"><strong>Co-Founder — [Cybersecurity venture]</strong> · Belfer Center QLab Defense Accelerator<p>Automated penetration testing and red-teaming platform. ~$75K ARR from government organizations and companies in regulated industries. YC-backed (declined); finalist for the $100K Perplexity seed fund pitch.</p></div></div>
 
-<div class="row"><div class="when">2022–2023</div><div class="what"><strong>ML Research Assistant — Jia Liu Lab of Bioelectronics, Harvard SEAS</strong><p>Spike sorting and functional-connectivity reconstruction from chronic 32-channel flexible mesh probe recordings; spatial-transcriptomics reading and journal club. <a href="projects/jia-liu-lab.html">Details</a>.</p></div></div>
+<div class="row"><div class="when">2025–2026</div><div class="what"><strong>Restructuring Analyst — Lazard</strong> · Chicago<p>Distressed and special-situations advisory. [One line on deal scale and the modeling you owned.]</p></div></div>
 
 <div class="row"><div class="when">Summer 2024</div><div class="what"><strong>Credit Summer Analyst — KKR</strong> · San Francisco</div></div>
 
@@ -34,15 +42,9 @@ description: Curriculum vitae.
 
 <div class="row"><div class="when">2020–2021</div><div class="what"><strong>5G/IoT Intern — Broadband Media Wireless Lab, NTUST</strong> · Taipei<p>With Dr. Ray-Guang Cheng. LSTM model for dispenser energy/behavior prediction; Flask API over lab MongoDB; simulated ALOHA packet transmission to study OFDMA resource allocation in IEEE 802.11ax.</p></div></div>
 
-<div class="row"><div class="when">2019</div><div class="what"><strong>Research Mentee — Georgetown University</strong><p>Neuroanatomical circuit tracing with Drs. Niaz Sahibzada and Lorenza Bellusci, through the TJHSST Mentorship Program. <a href="projects/sst-neuroanatomy.html">Details</a>.</p></div></div>
-
-## Publications
-
-<div class="row"><div class="when">2024</div><div class="what"><strong>Uber Stable: Formulating the Rideshare System as a Stable Matching Problem</strong><p>Rhea Acharya, <strong>Jessica Chen</strong>, Helen Xiao. <em>ACM Conference on Equity and Access in Algorithms, Mechanisms, and Optimization (EAAMO 2024)</em>. arXiv:2403.13083. [<a href="https://arxiv.org/abs/2403.13083">arXiv</a>] [<a href="files/uberstable.pdf">pdf</a>]</p></div></div>
-
 ## Teaching
 
-<div class="row"><div class="when">2023–2025</div><div class="what"><strong>Teaching Fellow, Harvard Computer Science</strong><p>CS 136 (Economics and Computation), CS 182 (Artificial Intelligence), CS 51 (Abstraction and Design in Computation).</p></div></div>
+<div class="row"><div class="when">2023–2025</div><div class="what"><strong>Teaching Fellow, Harvard Computer Science</strong><p>CS 182 (Artificial Intelligence — Stephanie Gil, Ariel Procaccia, Milind Tambe); CS 136 (Economics and Computation — David Parkes); CS 51 (Abstraction and Design in Computation — [professor]).</p></div></div>
 
 ## Awards
 

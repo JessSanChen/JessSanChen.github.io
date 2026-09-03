@@ -217,6 +217,17 @@ footer.site a:hover { color: var(--accent); }
 
 /* ---------- Utilities ---------- */
 
+.portrait {
+  float: right;
+  width: 190px;
+  margin: 0.4rem 0 1rem 1.75rem;
+  border-radius: 6px;
+  border: 1px solid var(--rule);
+}
+@media (max-width: 34rem) {
+  .portrait { float: none; width: 140px; margin: 0 0 1rem; }
+}
+
 .figure { margin: 1.75rem 0; }
 .figure img { max-width: 100%; height: auto; border: 1px solid var(--rule); border-radius: 4px; display: block; }
 .figure figcaption { font-size: 0.875rem; color: var(--ink-faint); margin-top: 0.5rem; }

@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Research — Jessica Chen</title>
-<meta name="description" content="Research interests — incentives in multi-agent learning systems.">
+<meta name="description" content="AI safety and biosecurity — red-teaming, mechanism design, and wet-lab research.">
 <meta property="og:title" content="Research — Jessica Chen">
-<meta property="og:description" content="Research interests — incentives in multi-agent learning systems.">
+<meta property="og:description" content="AI safety and biosecurity — red-teaming, mechanism design, and wet-lab research.">
 <meta property="og:type" content="website">
 <link rel="stylesheet" href="assets/style.css">
 </head>
@@ -25,32 +25,14 @@
 
 <main>
 <h1 id="research">Research</h1>
-<p class="lede">Most machine learning assumes the data-generating process doesn't push back. Increasingly it does. My work is about learning and allocation systems whose participants are strategic — and about designing mechanisms that still behave when they are.</p>
+<p class="lede">I work on AI safety and biosecurity — keeping powerful, dual-use systems from failing when the agents around them don't cooperate.</p>
 
-<h2 id="the-through-line">The through-line</h2>
-<p>Across five courses and a preprint I kept returning to one shape of problem: a system allocates something scarce — rides, compute, model updates, loans, nursing shifts — to agents who have private information and their own objectives, and the system has to learn while those agents respond to what it&rsquo;s learning.</p>
-<ul>
-<li><strong>Matching under noisy preferences.</strong> In a compute marketplace where users report multi-dimensional preferences with noise, stability decays exponentially in report noise — and, more interestingly, stability stops predicting social welfare. The field&rsquo;s standard objective and the thing we actually want come apart.</li>
-<li><strong>Incentive-compatible selection.</strong> In federated learning, clients get the global model whether or not they do the work. PRIMES pays on global performance rather than selection, which makes truthful reporting the best response, and beats efficiency-only selection (Oort) on both accuracy per round and convergence time.</li>
-<li><strong>Auctions with aggregated signals.</strong> Common-value auction theory mostly analyzes the max-signal setting. When the value is the <em>sum</em> of signals, equilibrium bidding collapses to at most twice a bidder&rsquo;s private signal — far under the naive benchmark.</li>
-<li><strong>Fairness that survives gaming.</strong> Fairness guarantees derived on static features don&rsquo;t hold when agents can modify reported features at asymmetric cost. Restoring them requires changing what you measure.</li>
-</ul>
-<h2 id="why-this-matters-for-frontier-ai">Why this matters for frontier AI</h2>
-<p>[This section is the one to sharpen — it&rsquo;s the bridge from your coursework to
-the roles you&rsquo;re targeting. The argument sketch, in your words:]</p>
-<p>Multi-agent systems stopped being a theoretical setting and became the deployment reality. Agents negotiate with other agents, call tools with their own incentives behind them, and are increasingly trained against reward signals that other agents can influence. Reward hacking is a mechanism-design failure. Agent-to-agent protocols are matching and bargaining problems. Multi-agent RL training environments are games whose equilibria we mostly haven&rsquo;t checked.</p>
-<p>[Two or three sentences on the specific thing you&rsquo;d want to work on. Concreteness is the strongest signal you can send — a named problem with a named baseline reads ten times more serious than a paragraph of aspiration.]</p>
-<h2 id="what-i-bring-thats-unusual">What I bring that&rsquo;s unusual</h2>
-<p><strong>Building, not only proving.</strong> PRIMES isn&rsquo;t a proof sketch — it&rsquo;s implemented on Flower FL with a separate gRPC back-channel and measured against real baselines. I&rsquo;d rather have a result that survives an implementation.</p>
-<p><strong>An empirical streak.</strong> For the hukou paper I rejected the literature&rsquo;s proxy for treatment and hand-coded reform intensity city by city from local regulations, then scraped provincial statistical yearbooks off individual bureau websites. The finding was a null result and I reported it as one.</p>
-<p><strong>A year watching strategic behavior at scale.</strong> Restructuring at Lazard is adversarial negotiation under asymmetric information with real money at stake. I don&rsquo;t claim it made me a better scientist. I claim it gave me an intuition for how sophisticated parties actually behave when incentives diverge — which is the thing my research is about.</p>
-<p><strong>Breadth, current.</strong> Writing AGI House&rsquo;s research briefs means continuous literature review across the whole frontier stack, in conversation with the people producing it. I know what&rsquo;s happening in robotics benchmarking, voice, agent infrastructure, and multimodal architectures because I had to write it down this month.</p>
-<h2 id="other-interests">Other interests</h2>
-<p>I also work on <strong>empirical political economy</strong>, mostly China and Taiwan — <a href="projects/hukou-reform.html">hukou reform and internal migration</a>, and <a href="projects/cross-strait-brain-drain.html">semiconductor brain drain across the strait</a>. Different tools, same question: how institutional design shapes what agents actually do.</p>
-<p>My first research was in <strong>neuroscience</strong> — <a href="projects/sst-neuroanatomy.html">circuit tracing at Georgetown</a>, later <a href="projects/jia-liu-lab.html">work in Jia Liu&rsquo;s Bioelectronics Lab at Harvard</a> on spike sorting and functional-connectivity reconstruction from chronic mesh-probe recordings.</p>
-<div class="callout">
-<p>[Optional: link a PDF research statement here once you've written one — some applications ask for it, and it's the same content at more length.]</p>
-</div>
+<h2 id="ai-safety">AI safety</h2>
+<p>Two angles. <strong>Red-teaming:</strong> <a href="projects/spectre-red-teaming.html">Spectre</a> is a multi-agent system that generates diversified attacks to find where an aligned model breaks — building the adversary is how you learn the failure modes. <strong>Theory:</strong> many alignment failures are mechanism-design failures, and reward hacking is just an agent gaming a signal. My <a href="projects/uber-stable.html">preprint</a> and coursework circle this — <a href="projects/primes-federated-learning.html">incentive-compatible selection</a> in federated learning, <a href="projects/winners-curse-auctions.html">auctions with aggregated signals</a>, <a href="projects/compute-marketplace.html">matching under noisy preferences</a>, and <a href="projects/fairness-online-gaming.html">fairness that survives gaming</a>. The common question: what a learning or allocation system does when its participants are strategic, and how to design one that holds up.</p>
+<h2 id="biosecurity">Biosecurity</h2>
+<p>Grounded in wet-lab work — <a href="projects/sst-neuroanatomy.html">viral circuit tracing at Georgetown</a> (Cre-dependent pseudorabies tracing in mouse brain) and <a href="projects/jia-liu-lab.html">neural-interface research</a> in Jia Liu&rsquo;s lab (spike sorting and connectivity reconstruction from chronic mesh probes). Same instinct on the bio side: dual-use capability, and how you govern it. I want to work at the AI–bio safety boundary.</p>
+<h2 id="also">Also</h2>
+<p><a href="projects.html">Empirical political economy</a>, mostly China and Taiwan — <a href="projects/hukou-reform.html">hukou reform</a> and <a href="projects/cross-strait-brain-drain.html">cross-strait semiconductor brain drain</a>. Different tools, same instinct: how institutional design shapes what agents actually do.</p>
 </main>
 
 <footer class="site">

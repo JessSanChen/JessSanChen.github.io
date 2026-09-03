@@ -6,7 +6,7 @@ description: Research briefs, interviews, and field notes from AGI House.
 
 # Writing
 
-<p class="lede">I write the research briefs at <a href="https://agihouse.org">AGI House</a> — technical primers on whatever the frontier is doing that month, interviews with the people doing it, and notes from the reading groups and build days we run. Selected pieces below; the <a href="https://blog.agihouse.org/team-members/jessica-chen">full archive</a> has [23].</p>
+<p class="lede">Research briefs, interviews, and field notes I write at <a href="https://agihouse.org">AGI House</a> — primers on whatever the frontier is doing that month. Selected pieces below; <a href="https://blog.agihouse.org/team-members/jessica-chen">full archive</a>.</p>
 
 ## Interviews & conversations
 
@@ -14,7 +14,7 @@ description: Research briefs, interviews, and field notes from AGI House.
 
 <article class="entry">
 <h3><a href="https://blog.agihouse.org/posts/jerry-tworek-deep-dive">Seven Years of Scaling RL: Jerry Tworek on o1, the Death of Evals, and Why Transformers Can't Learn at Test Time</a></h3>
-<p class="blurb">A long-form conversation with [OpenAI's Jerry Tworek] on what actually scaled in RL, why evaluation is breaking down as a research instrument, and the test-time learning gap.</p>
+<p class="blurb">A long-form conversation with OpenAI's Jerry Tworek on what actually scaled in RL, why evaluation is breaking down as a research instrument, and the test-time learning gap.</p>
 </article>
 
 <article class="entry">

@@ -1,38 +1,32 @@
 ---
 title: Jessica Chen
 output: index.html
-description: Lead Researcher at AGI House. I work on incentives in multi-agent learning systems.
+description: I work on AI safety and biosecurity — red-teaming, mechanism design, and wet-lab research.
 ---
 
 <!-- Anything in [brackets] is a placeholder or a fact I couldn't verify.
-     Replace it, then run:  python3 build.py  -->
+     Drop a headshot at content/static/portrait.jpg, then run: python3 build.py -->
 
 # Jessica Chen
 
-<p class="lede">I'm Lead Researcher at <a href="https://agihouse.org">AGI House</a>, where I write research briefs on the frontier AI stack and run interviews, firesides, and reading groups with the people building it. My own research is on <strong>incentives in multi-agent learning systems</strong> — what happens to a learning or allocation mechanism when the agents inside it are strategic.</p>
+<img class="portrait" src="files/prof_pic.png" alt="Jessica Chen">
 
-That's the thread through most of what I've done: matching markets for compute, incentive-compatible client selection in federated learning, auctions where signals aggregate, fairness that survives agents gaming their own features. Some of it is theory, most of it is built and measured.
+<p class="lede">I work on <strong>AI safety and biosecurity</strong>, coming at both from more than one direction.</p>
 
-## What I'm doing now
+Some fun things that I've built and broke: [Spectre](projects/spectre-red-teaming.html), a multi-agent red-teaming system, won $25K at the SCSP AGI Hackathon and jailbroke the Air Force Research Lab's LLM co-founding a [cybersecurity venture](cv.html) doing automated red-teaming (~$75K ARR) out of the Belfer Center's QLab accelerator. I also spent too much time on [mechanism design](research.html) for systems whose agents are strategic.
 
-At AGI House I've written [23] research briefs and event memos over the past year — the technical stack behind realtime voice agents, identity for reasoning agents, why robotics benchmarking is broken, what synthetic-data companies have to prove. The job is essentially continuous literature review across the whole frontier, in conversation with the people producing it. I've interviewed [Jerry Tworek on seven years of scaling RL](https://blog.agihouse.org/posts/jerry-tworek-deep-dive), hosted reading groups with [NVIDIA's autonomous vehicles lead](https://blog.agihouse.org/posts/alpamayo-reading-room), and run build days with [Google DeepMind](https://blog.agihouse.org/posts/deepmind-build-day-post-event-memo).
+I have also done wet-lab work — including [viral circuit tracing at Georgetown Medical School](projects/sst-neuroanatomy.html) and [neural-interface research](projects/jia-liu-lab.html) in Jia Liu's lab at Harvard. 
 
-[Selected writing →](writing.html)
+I'm currently Lead Researcher at [AGI House](https://agihouse.org), writing [research briefs](writing.html), [interviewing cool people](https://www.youtube.com/watch?v=v2aVTyCpvCM), and hosting [research spotlights](https://www.youtube.com/watch?v=wOtS8W-_QKs&t=938s) and quarterly [research reading groups](https://blog.agihouse.org/posts/alpamayo-reading-room). Before that, a year in restructuring at Lazard; before that, Harvard — a dual S.M./A.B. in Computer Science, an A.B. in Economics, and teaching fellow for CS 51 (Intermediate Programming), CS 136 (Mechanism Design), and CS 182 (Artificial Intelligenec).
 
-## Before that
-
-I spent a year as a restructuring analyst at Lazard in Chicago — [one line on deal scale]. It was a deliberate detour and I'll be direct about why it's here rather than hidden: I work on mechanism design, and I spent a year inside the largest strategic-behavior laboratory that exists — sophisticated parties bargaining under asymmetric information, with real money and real deadlines. For someone who studies what agents do when their incentives diverge from the system's, that's domain experience, not a gap.
-
-Alongside it I co-founded a [cybersecurity venture](cv.html) out of the Belfer Center's QLab Defense Accelerator — automated penetration testing and red-teaming, now at ~$75K ARR. And I keep building: [Spectre](projects/spectre-red-teaming.html), a multi-agent red-teaming system, won first prize and $25,000 at the SCSP AGI Hackathon and jailbroke the Air Force Research Lab's LLM.
-
-Before that, Harvard: dual master's and bachelor's in Computer Science plus a bachelor's in Economics, [research in Jia Liu's Bioelectronics Lab](projects/jia-liu-lab.html) on spike sorting and neural connectivity reconstruction, and teaching fellow for CS 51, CS 136, and CS 182.
+Some other things about me: I was born in Taiwan (and every so often think about the political economics of the Greater China region [[1]](files/hukou-reform.pdf)[[2]](files/cross-strait-brain-drain.pdf)), and I signed up for a marathon recently!
 
 ## Selected work
 
 {{selected}}
 
 <p class="small muted" style="margin-top:1.25rem"><a href="projects.html">All projects and publications →</a></p>
-
+<!-- 
 <div class="callout">
-<p><strong>Looking for:</strong> research engineer and applied research roles where the problem involves multiple agents, misaligned incentives, or mechanisms that have to hold up when participants are strategic. The fastest way to reach me is <a href="mailto:jessica@agihouse.org">email</a>.</p>
-</div>
+<p><strong>Looking for:</strong> research roles in AI safety and biosecurity. The fastest way to reach me is <a href="mailto:jessica@agihouse.org">email</a>.</p>
+</div> -->

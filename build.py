@@ -24,7 +24,7 @@ import markdown
 ROOT = Path(__file__).parent
 CONTENT = ROOT / "content"
 SITE_TITLE = "Jessica Chen"
-SITE_TAGLINE = "Incentives in multi-agent learning systems"  # confirm before publishing
+SITE_TAGLINE = "Multi-agent AI systems: mechanism design, real implementations, red-teaming"  # confirm before publishing
 BASE_URL = ""  # e.g. "" for user.github.io, or "/repo-name" for a project page
 
 NAV = [
