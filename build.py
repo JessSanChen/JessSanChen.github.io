@@ -27,18 +27,22 @@ SITE_TITLE = "Jessica Chen"
 SITE_TAGLINE = "Multi-agent AI systems: mechanism design, real implementations, red-teaming"  # confirm before publishing
 BASE_URL = ""  # e.g. "" for user.github.io, or "/repo-name" for a project page
 
+# Each nav item is a dict: {href, label, external?}.
+# `href` is written relative to the site root; it's re-based per page depth.
+# `external: True` opens in a new tab and never gets the current-page marker
+# (use it for links to files like the CV PDF rather than generated pages).
 NAV = [
-    ("index.html", "About"),
-    ("research.html", "Research"),
-    ("projects.html", "Projects"),
-    ("writing.html", "Writing"),
-    ("cv.html", "CV"),
+    {"href": "index.html", "label": "About"},
+    # {"href": "research.html", "label": "Research"},
+    {"href": "projects.html", "label": "Projects"},
+    {"href": "writing.html", "label": "Writing"},
+    {"href": "files/ChenJessica%20Resume.pdf", "label": "CV", "external": True},
 ]
 
 FOOTER_LINKS = [
     ("mailto:jessica@agihouse.org", "Email"),
     ("https://github.com/JessSanChen", "GitHub"),
-    ("https://arxiv.org/a/chen_j_1", "arXiv"),
+    # ("https://arxiv.org/a/chen_j_1", "arXiv"),
     ("https://blog.agihouse.org/team-members/jessica-chen", "AGI House"),
 ]
 
@@ -94,23 +98,12 @@ def render_md(body):
 # Layout
 # --------------------------------------------------------------------------
 
-def layout(title, body_html, current, depth=0, description=""):
-    up = "../" * depth
-    nav = "\n".join(
-        '        <a href="{u}{href}"{cur}>{label}</a>'.format(
-            u=up, href=href, label=html.escape(label),
-            cur=' aria-current="page"' if href == current else "")
-        for href, label in NAV
-    )
-    foot = "\n".join(
-        '      <a href="{href}">{label}</a>'.format(href=html.escape(url), label=html.escape(label))
-        for url, label in FOOTER_LINKS
-    )
-    page_title = SITE_TITLE if title == SITE_TITLE else "{} — {}".format(title, SITE_TITLE)
-    desc = description or "{} — {}".format(SITE_TITLE, SITE_TAGLINE)
-    return f"""<!DOCTYPE html>
-<html lang="en">
-<head>
+# The page is assembled from small component builders. Each returns a chunk of
+# HTML; `layout()` composes them. `up` is the relative prefix ("../" per level of
+# nesting) that re-bases root-relative links for pages served from a subdirectory.
+
+def render_head(page_title, desc, up):
+    return f"""<head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{html.escape(page_title)}</title>
@@ -119,23 +112,59 @@ def layout(title, body_html, current, depth=0, description=""):
 <meta property="og:description" content="{html.escape(desc)}">
 <meta property="og:type" content="website">
 <link rel="stylesheet" href="{up}assets/style.css">
-</head>
-<body>
+</head>"""
 
-<header class="site">
+
+def render_nav(current, up):
+    items = []
+    for item in NAV:
+        attrs = ""
+        if not item.get("external") and item["href"] == current:
+            attrs += ' aria-current="page"'
+        if item.get("external"):
+            attrs += ' target="_blank" rel="noopener"'
+        items.append(
+            '        <a href="{u}{href}"{attrs}>{label}</a>'.format(
+                u=up, href=item["href"], attrs=attrs, label=html.escape(item["label"]))
+        )
+    return "\n".join(items)
+
+
+def render_header(current, up):
+    return f"""<header class="site">
   <p class="name"><a href="{up}index.html">{html.escape(SITE_TITLE)}</a></p>
   <nav class="site">
-{nav}
+{render_nav(current, up)}
   </nav>
-</header>
+</header>"""
+
+
+def render_footer():
+    links = "\n".join(
+        '      <a href="{href}">{label}</a>'.format(href=html.escape(url), label=html.escape(label))
+        for url, label in FOOTER_LINKS
+    )
+    return f"""<footer class="site">
+{links}
+</footer>"""
+
+
+def layout(title, body_html, current, depth=0, description=""):
+    up = "../" * depth
+    page_title = SITE_TITLE if title == SITE_TITLE else "{} — {}".format(title, SITE_TITLE)
+    desc = description or "{} — {}".format(SITE_TITLE, SITE_TAGLINE)
+    return f"""<!DOCTYPE html>
+<html lang="en">
+{render_head(page_title, desc, up)}
+<body>
+
+{render_header(current, up)}
 
 <main>
 {body_html}
 </main>
 
-<footer class="site">
-{foot}
-</footer>
+{render_footer()}
 
 </body>
 </html>
