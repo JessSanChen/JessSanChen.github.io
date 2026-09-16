@@ -202,6 +202,12 @@ def rebase(url, depth):
     return url
 
 
+def has_page(p):
+    """A project gets its own detail page unless it sets `page: false` in front
+    matter — those are link-only entries whose title points straight at the paper."""
+    return p.get("page", "").lower() not in ("false", "no", "0")
+
+
 def project_entry_html(p, depth=0):
     up = "../" * depth
     links = "".join(
@@ -213,8 +219,15 @@ def project_entry_html(p, depth=0):
     meta_bits = [b for b in [p.get("venue", ""), p.get("date", "")] if b]
     meta_line = f'<p class="meta">{html.escape(" · ".join(meta_bits))}</p>' if meta_bits else ""
     blurb = f'<p class="blurb">{html.escape(p.get("blurb", ""))}</p>' if p.get("blurb") else ""
+    title = html.escape(p.get("title", p["slug"]))
+    if has_page(p):
+        title_html = f'<a href="{up}projects/{p["slug"]}.html">{title}</a>'
+    elif p["links"]:
+        title_html = f'<a href="{html.escape(rebase(p["links"][0][1], depth))}">{title}</a>'
+    else:
+        title_html = title
     return f"""  <article class="entry">
-    <h3><a href="{up}projects/{p['slug']}.html">{html.escape(p.get('title', p['slug']))}</a>{tag}</h3>
+    <h3>{title_html}{tag}</h3>
 {meta_line}
 {blurb}
     <div class="links">{links}</div>
@@ -232,6 +245,8 @@ def build():
     outdir = ROOT / "projects"
     outdir.mkdir(exist_ok=True)
     for p in projects:
+        if not has_page(p):
+            continue
         links = "".join(
             '<a href="{}">{}</a>'.format(html.escape(u), html.escape(l)) for l, u in p["links"]
         )

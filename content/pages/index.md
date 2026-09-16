@@ -13,7 +13,7 @@ description: I work on AI safety and biosecurity — red-teaming, mechanism desi
 
 <p class="lede">I work on <strong>AI safety and biosecurity</strong>, coming at both from more than one direction.</p>
 
-Some fun things that I've built and broke: [Spectre](projects/spectre-red-teaming.html), a multi-agent red-teaming system, won $25K at the SCSP AGI Hackathon and jailbroke the Air Force Research Lab's LLM, co-founding a [cybersecurity venture](files/ChenJessica%20Resume.pdf) doing automated red-teaming (~$75K ARR) out of the Belfer Center's QLab accelerator. I also spent too much time on [mechanism design](research.html) for systems whose agents are strategic.
+Some fun things that I've built and broke: [Spectre](projects/spectre-red-teaming.html), a multi-agent red-teaming system that jailbroke the Air Force Research Lab's LLM and won $25K at Eric Schmidt's hackathon; co-founded a [cybersecurity venture](files/ChenJessica%20Resume.pdf) doing automated red-teaming out of the Belfer Center's QLab accelerator. I also spent too much time on [mechanism design](research.html) for systems whose agents are strategic.
 
 I have also done wet-lab work — including [viral circuit tracing at Georgetown Medical School](projects/sst-neuroanatomy.html) and [neural-interface research](projects/jia-liu-lab.html) in Jia Liu's lab at Harvard. 
 
