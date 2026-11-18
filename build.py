@@ -47,7 +47,8 @@ FOOTER_LINKS = [
 
 # Projects are grouped on the index page by `section` (falling back to `kind`),
 # in this order. `kind` is shown as the small tag on each entry.
-SECTION_ORDER = ["AI x biosecurity", "AI agents and evaluation", "Mechanism design", "Lab research"]
+SECTION_ORDER = ["AI x biosecurity", "AI agents and evaluation", "Mechanism design and learning systems",
+                 "Lab research", "Builds and hackathons", "Political economy"]
 KIND_ORDER = ["Publication", "Under review", "In progress", "Preprint", "Project", "Program", "Course paper", "Hackathon", "Lab"]
 # Your name as it appears in `authors:`; it's bolded in author lists.
 SELF_NAME = "J. Chen"

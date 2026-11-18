@@ -1,7 +1,7 @@
 ---
 featured: true
 page: false
-section: Mechanism design
+section: Mechanism design and learning systems
 order: 10
 title: UberStable: Formulating the Rideshare System as a Stable Matching Problem
 kind: Publication

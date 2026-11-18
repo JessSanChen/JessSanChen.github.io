@@ -1,6 +1,6 @@
 ---
 page: false
-section: Mechanism design
+section: Mechanism design and learning systems
 order: 30
 title: Multi-Dimensional Preference Ordering for a Stable Compute Marketplace
 kind: Paper

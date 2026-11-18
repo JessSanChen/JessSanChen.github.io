@@ -1,6 +1,6 @@
 ---
 page: false
-section: Mechanism design
+section: Mechanism design and learning systems
 order: 20
 title: Countering the Winner's Curse in Aggregated-Signal Common-Value Auctions
 kind: Paper

@@ -1,6 +1,6 @@
 ---
 page: false
-section: Mechanism design
+section: Mechanism design and learning systems
 order: 40
 title: PRIMES: An Incentive-Aligned Agent Selection Strategy for Federated Learning
 kind: Paper
