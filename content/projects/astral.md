@@ -1,5 +1,4 @@
 ---
-featured: true
 page: false
 section: AI x biosecurity
 order: 10

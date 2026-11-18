@@ -50,9 +50,13 @@ description: Curriculum vitae.
 
 ## Education
 
-<div class="row"><div class="when">2021–2025</div><div class="what"><strong>Harvard University</strong> · Cambridge, MA<p>Dual S.M. and A.B. in Computer Science; A.B. in Economics. Honors. GPA 3.8/4.0. Teaching fellow for CS 51, CS 136 (Economics and Computation), and CS 182 (Artificial Intelligence).</p></div></div>
+<div class="row"><div class="when">2021–2025</div><div class="what"><strong>Harvard University</strong> · Cambridge, MA<p>Dual S.M. and A.B. in Computer Science; A.B. in Economics. Honors. GPA 3.8/4.0.</p></div></div>
 
 <div class="row"><div class="when">2017–2021</div><div class="what"><strong>Thomas Jefferson High School for Science and Technology</strong> · Alexandria, VA</div></div>
+
+## Teaching
+
+<div class="row"><div class="when">2023–2025</div><div class="what"><strong>Teaching Fellow, Harvard Computer Science</strong><p>CS 182 (Artificial Intelligence), CS 136 (Economics and Computation), CS 51.</p></div></div>
 
 ## Skills
 
