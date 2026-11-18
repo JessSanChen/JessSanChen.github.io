@@ -1,4 +1,5 @@
 ---
+draft: true
 title: LifelineAI — VLM Fall Monitoring and Triage
 kind: Build
 venue: Cognition × Mercor × Etched Hackathon

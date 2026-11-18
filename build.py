@@ -24,7 +24,7 @@ import markdown
 ROOT = Path(__file__).parent
 CONTENT = ROOT / "content"
 SITE_TITLE = "Jessica Chen"
-SITE_TAGLINE = "Multi-agent AI systems: mechanism design, real implementations, red-teaming"  # confirm before publishing
+SITE_TAGLINE = "AI x biosecurity: misuse monitoring, agent evaluation, and the wet-lab context behind them"
 BASE_URL = ""  # e.g. "" for user.github.io, or "/repo-name" for a project page
 
 # Each nav item is a dict: {href, label, external?}.
@@ -33,10 +33,9 @@ BASE_URL = ""  # e.g. "" for user.github.io, or "/repo-name" for a project page
 # (use it for links to files like the CV PDF rather than generated pages).
 NAV = [
     {"href": "index.html", "label": "About"},
-    # {"href": "research.html", "label": "Research"},
-    {"href": "projects.html", "label": "Projects"},
+    {"href": "projects.html", "label": "Research"},
     {"href": "writing.html", "label": "Writing"},
-    {"href": "files/ChenJessica%20Resume.pdf", "label": "CV", "external": True},
+    {"href": "cv.html", "label": "CV"},
 ]
 
 FOOTER_LINKS = [
@@ -46,8 +45,12 @@ FOOTER_LINKS = [
     ("https://blog.agihouse.org/team-members/jessica-chen", "AGI House"),
 ]
 
-# Order in which project kinds are grouped on the index page.
-KIND_ORDER = ["Publication", "Preprint", "Research", "Build", "Political economy", "Open source", "Hackathon", "Writing", "Earlier work"]
+# Projects are grouped on the index page by `section` (falling back to `kind`),
+# in this order. `kind` is shown as the small tag on each entry.
+SECTION_ORDER = ["AI x biosecurity", "AI agents and evaluation", "Mechanism design", "Lab research"]
+KIND_ORDER = ["Publication", "Under review", "In progress", "Preprint", "Project", "Program", "Course paper", "Hackathon", "Lab"]
+# Your name as it appears in `authors:`; it's bolded in author lists.
+SELF_NAME = "J. Chen"
 
 
 # --------------------------------------------------------------------------
@@ -216,8 +219,11 @@ def project_entry_html(p, depth=0):
     )
     kind = p.get("kind", "")
     tag = f'<span class="tag">{html.escape(kind)}</span>' if kind else ""
-    meta_bits = [b for b in [p.get("venue", ""), p.get("date", "")] if b]
-    meta_line = f'<p class="meta">{html.escape(" · ".join(meta_bits))}</p>' if meta_bits else ""
+    meta_bits = [html.escape(b) for b in [p.get("venue", ""), p.get("date", "")] if b]
+    if p.get("authors"):
+        meta_bits.insert(0, html.escape(p["authors"]).replace(
+            SELF_NAME, f"<strong>{SELF_NAME}</strong>"))
+    meta_line = f'<p class="meta">{" · ".join(meta_bits)}</p>' if meta_bits else ""
     blurb = f'<p class="blurb">{html.escape(p.get("blurb", ""))}</p>' if p.get("blurb") else ""
     title = html.escape(p.get("title", p["slug"]))
     if has_page(p):
@@ -244,6 +250,11 @@ def build():
     # --- individual project pages ---
     outdir = ROOT / "projects"
     outdir.mkdir(exist_ok=True)
+    # Drop pages left over from projects that are now drafts or link-only.
+    wanted = {f"{p['slug']}.html" for p in projects if has_page(p)}
+    for old in outdir.glob("*.html"):
+        if old.name not in wanted:
+            old.unlink()
     for p in projects:
         if not has_page(p):
             continue
@@ -271,16 +282,19 @@ def build():
         if "{{projects}}" in rendered:
             groups = []
             seen = set()
-            for kind in KIND_ORDER + sorted({p.get("kind", "") for p in projects}):
-                if kind in seen:
+            group_of = lambda p: p.get("section") or p.get("kind", "")
+            for sec in SECTION_ORDER + sorted({group_of(p) for p in projects}):
+                if sec in seen:
                     continue
-                seen.add(kind)
-                bucket = [p for p in projects if p.get("kind", "") == kind]
+                seen.add(sec)
+                bucket = [p for p in projects if group_of(p) == sec]
                 if not bucket:
                     continue
+                bucket.sort(key=lambda p: int(p.get("order", "500")))
                 entries = "\n".join(project_entry_html(p) for p in bucket)
-                label = kind or "Other"
-                groups.append(f'<h2>{html.escape(label)}</h2>\n<div class="entries">\n{entries}\n</div>')
+                label = sec or "Other"
+                anchor = re.sub(r"[^a-z0-9]+", "-", label.lower()).strip("-")
+                groups.append(f'<h2 id="{anchor}">{html.escape(label)}</h2>\n<div class="entries">\n{entries}\n</div>')
             rendered = rendered.replace("<p>{{projects}}</p>", "\n".join(groups))
             rendered = rendered.replace("{{projects}}", "\n".join(groups))
 
@@ -289,9 +303,9 @@ def build():
         if "{{selected}}" in rendered:
             feat = [p for p in projects if p.get("featured", "").lower() in ("true", "yes", "1")]
             if feat:
-                rank = {k: i for i, k in enumerate(KIND_ORDER)}
-                feat.sort(key=lambda p: (rank.get(p.get("kind", ""), 99), p.get("date", "")),
-                          reverse=False)
+                rank = {k: i for i, k in enumerate(SECTION_ORDER)}
+                feat.sort(key=lambda p: (rank.get(p.get("section", ""), 99),
+                                         int(p.get("order", "500"))))
             else:
                 feat = projects[:3]
             entries = "\n".join(project_entry_html(p) for p in feat)

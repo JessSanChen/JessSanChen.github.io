@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Jessica Chen</title>
-<meta name="description" content="I work on AI safety and biosecurity — red-teaming, mechanism design, and wet-lab research.">
+<meta name="description" content="I work on AI x biosecurity: tools and benchmarks for catching AI misuse in the life sciences.">
 <meta property="og:title" content="Jessica Chen">
-<meta property="og:description" content="I work on AI safety and biosecurity — red-teaming, mechanism design, and wet-lab research.">
+<meta property="og:description" content="I work on AI x biosecurity: tools and benchmarks for catching AI misuse in the life sciences.">
 <meta property="og:type" content="website">
 <link rel="stylesheet" href="assets/style.css">
 </head>
@@ -16,62 +16,56 @@
   <p class="name"><a href="index.html">Jessica Chen</a></p>
   <nav class="site">
         <a href="index.html" aria-current="page">About</a>
-        <a href="projects.html">Projects</a>
+        <a href="projects.html">Research</a>
         <a href="writing.html">Writing</a>
-        <a href="files/ChenJessica%20Resume.pdf" target="_blank" rel="noopener">CV</a>
+        <a href="cv.html">CV</a>
   </nav>
 </header>
 
 <main>
-<!-- Anything in [brackets] is a placeholder or a fact I couldn't verify.
-     Drop a headshot at content/static/portrait.jpg, then run: python3 build.py -->
-
 <h1 id="jessica-chen">Jessica Chen</h1>
 <p><img class="portrait" src="files/prof_pic.png" alt="Jessica Chen"></p>
-<p class="lede">I work on <strong>AI safety and biosecurity</strong>, coming at both from more than one direction.</p>
+<p class="lede">I work on <strong>AI x biosecurity</strong>: building the tools and benchmarks that catch AI misuse in the life sciences.</p>
 
-<p>Some fun things that I&rsquo;ve built and broke: <a href="projects/spectre-red-teaming.html">Spectre</a>, a multi-agent red-teaming system that jailbroke the Air Force Research Lab&rsquo;s LLM and won $25K at Eric Schmidt&rsquo;s hackathon; co-founded a <a href="files/ChenJessica%20Resume.pdf">cybersecurity venture</a> doing automated red-teaming out of the Belfer Center&rsquo;s QLab accelerator. I also spent too much time on <a href="research.html">mechanism design</a> for systems whose agents are strategic.</p>
-<p>I have also done wet-lab work — including <a href="projects/sst-neuroanatomy.html">viral circuit tracing at Georgetown Medical School</a> and <a href="projects/jia-liu-lab.html">neural-interface research</a> in Jia Liu&rsquo;s lab at Harvard. </p>
-<p>I&rsquo;m currently Lead Researcher at <a href="https://agihouse.org">AGI House</a>, writing <a href="writing.html">research briefs</a>, <a href="https://www.youtube.com/watch?v=v2aVTyCpvCM">interviewing cool people</a>, and hosting <a href="https://www.youtube.com/watch?v=wOtS8W-_QKs&amp;t=938s">research spotlights</a> and quarterly <a href="https://blog.agihouse.org/posts/alpamayo-reading-room">research reading groups</a>. Before that, a year in restructuring at Lazard; before that, Harvard — a dual S.M./A.B. in Computer Science, an A.B. in Economics, and teaching fellow for CS 51 (Intermediate Programming), CS 136 (Mechanism Design), and CS 182 (Artificial Intelligence).</p>
-<p>Some other things about me: I was born in Taiwan (and every so often think about the political economics of the Greater China region <a href="files/hukou-reform.pdf">[1]</a><a href="files/cross-strait-brain-drain.pdf">[2]</a>), and I signed up for a marathon recently!</p>
+<p>I&rsquo;m an AI x Biosecurity Fellow at the <a href="https://www.cbai.ai/">Cambridge Boston Alignment Initiative</a>, where I lead <a href="https://astral.detection.bio/">ASTRAL</a>, an open-source scanner for biological misuse. I own the project&rsquo;s data governance and design partnerships. I&rsquo;m also first author on a benchmark for AI misuse monitors in dual-use research domains, with co-authors at NIST and RAND. This month I founded and ran the <a href="projects.html#ai-x-biosecurity">Boston Biosecurity Hackathon</a>, a life-sciences expert elicitation study and field-building workshop.</p>
+<p>More broadly, I study how AI agents behave when their context changes. <a href="projects.html#ai-agents-and-evaluation">Policy Under Pressure</a> (under review) is a 13-model, 26,398-episode study of how an agent&rsquo;s tools, its operator-assigned persona, and its peers&rsquo; reports shape whether it follows rules and reports honestly. Before that I worked on <a href="projects.html#mechanism-design">mechanism design</a>: what learning and allocation systems do when the agents inside them are strategic.</p>
+<p>I also have bench experience. In high school I cut brain slices, ran patch-clamp recordings, and did viral circuit tracing at <a href="projects.html#lab-research">Georgetown School of Medicine</a>. At Harvard I rebuilt the <a href="projects.html#lab-research">Jia Liu Lab&rsquo;s</a> electrophysiology analysis pipeline.</p>
+<p>I&rsquo;m also Lead Researcher at <a href="https://agihouse.org">AGI House</a>, where I write <a href="writing.html">research briefs</a>, host <a href="https://www.youtube.com/watch?v=5KQpZPbeq-Q">podcast interviews</a> and paper reading groups, and started the inaugural <a href="https://www.agihouse.org/fellowship">Fellows program</a>. Before that I spent a year as a restructuring analyst at Lazard, usually the sole analyst on a deal. I studied at Harvard, where I earned an S.M./A.B. in Computer Science and an A.B. in Economics and was a teaching fellow for CS 51, CS 136, and CS 182.</p>
+<p>Outside work: I was born in Taiwan (and sometimes write about the political economy of the region <a href="files/hukou-reform.pdf">[1]</a><a href="files/cross-strait-brain-drain.pdf">[2]</a>). I also dance, make digital art, ride motorcycles, and free-dive.</p>
 <h2 id="selected-work">Selected work</h2>
 <div class="entries">
   <article class="entry">
-    <h3><a href="projects/uber-stable.html">Uber Stable — Formulating the Rideshare System as a Stable Matching Problem</a><span class="tag">Publication</span></h3>
-<p class="meta">EAAMO 2024 (ACM Conf. on Equity and Access in Algorithms, Mechanisms, and Optimization) — from CS 136 · 2023-12</p>
-<p class="blurb">Deferred acceptance applied to rider–driver matching, trading system efficiency against equitable driver income.</p>
-    <div class="links"><a href="https://arxiv.org/abs/2403.13083">arXiv</a><a href="files/uberstable.pdf">PDF</a><a href="https://github.com/JessSanChen/">Code</a></div>
+    <h3><a href="https://astral.detection.bio/">ASTRAL — open-source scanner for biological misuse</a><span class="tag">Project</span></h3>
+<p class="meta">Cambridge Boston Alignment Initiative · team lead · 2026</p>
+<p class="blurb">An open-source tool that scans for biological misuse. I lead the team and own the project&#x27;s data governance and design partnerships.</p>
+    <div class="links"><a href="https://astral.detection.bio/">Site</a></div>
   </article>
   <article class="entry">
-    <h3><a href="projects/primes-federated-learning.html">PRIMES — Incentive-Aligned Agent Selection for Federated Learning</a><span class="tag">Research</span></h3>
-<p class="meta">CS 243, Harvard · 2023-12</p>
-<p class="blurb">Paying federated clients on global performance rather than selection makes truthful reporting the best response — and converges 10–33% faster.</p>
-    <div class="links"><a href="files/primes.pdf">PDF</a><a href="https://github.com/JessSanChen/">Code</a></div>
+    <h3>Misuse Monitor Benchmark for Biological and Dual-Use Research Domains<span class="tag">In progress</span></h3>
+<p class="meta"><strong>J. Chen</strong>, C. Fagan, S. Dev, J. Lee, S. Foianini · with co-authors at NIST and RAND · 2026</p>
+<p class="blurb">A benchmark for evaluating AI misuse monitors in dual-use domains. It contributes expert review labels with measured inter-rater agreement, matched conversation sets that hold topic fixed so monitors can&#x27;t score well on topic alone, and decomposed harm datasets.</p>
+    <div class="links"></div>
   </article>
   <article class="entry">
-    <h3><a href="files/apart-digital-minds.pdf">Normative Conformity and Perception in Multi-Agent Model Misalignment</a><span class="tag">Research</span></h3>
-<p class="meta">Apart Research — Digital Minds Research Sprint · 2026-08</p>
-<p class="blurb">Do frontier models hold stable preferences under social pressure? Across six models, raw tool-call rates overcount agent policy violations by ~20× (Sonnet 5&#x27;s 45% is ~2% after probe-vs-act disambiguation), and peer pressure stabilizes one model family while destabilizing another — misalignment that single-agent evals miss.</p>
-    <div class="links"><a href="files/apart-digital-minds.pdf">Paper</a><a href="https://github.com/JessSanChen/digital-minds">Code</a></div>
+    <h3>Boston Biosecurity Hackathon<span class="tag">Program</span></h3>
+<p class="meta">Founder · Cambridge, MA · Nov 2026</p>
+<p class="blurb">A life-sciences expert elicitation study that doubled as a biosecurity field-building workshop. ~150 applications for limited seats and $5,000 in prizes. I recruited participants, secured sponsorship and venue, and built a secure data-collection platform.</p>
+    <div class="links"></div>
   </article>
   <article class="entry">
-    <h3><a href="projects/spectre-red-teaming.html">Spectre — Multi-Agent Red-Teaming for Defense</a><span class="tag">Build</span></h3>
-<p class="meta">SCSP AGI Hackathon — $25,000 first prize · 2024-10</p>
-<p class="blurb">A multi-agent system that generates diversified red-team prompts across defense applications and attack styles. It jailbroke the Air Force Research Lab&#x27;s LLM.</p>
-    <div class="links"><a href="https://github.com/JessSanChen/SpectreRedTeaming">Code</a></div>
+    <h3><a href="files/apart-digital-minds.pdf">Policy Under Pressure: Social Context and Agentic Rule-Following</a><span class="tag">Under review</span></h3>
+<p class="meta"><strong>J. Chen</strong>, R. Acharya · 2026</p>
+<p class="blurb">I designed and built the harness for a 13-model, 26,398-episode study of how an agent&#x27;s tool, operator-assigned persona, and peer reports change whether it follows rules and reports honestly on itself. Agents were more than 4× as likely to break a rule by writing code as by calling a named tool.</p>
+    <div class="links"><a href="files/apart-digital-minds.pdf">Earlier version (Apart sprint)</a><a href="https://github.com/JessSanChen/digital-minds">Code</a></div>
   </article>
   <article class="entry">
-    <h3><a href="projects/hukou-reform.html">The Impact of China&#x27;s 2014 Hukou Reforms on City-Level Population Growth</a><span class="tag">Political economy</span></h3>
-<p class="meta">Ec 970, Harvard — advised by Andrés Maggi · 2025-05</p>
-<p class="blurb">Hand-coding reform intensity city by city, I find no average population gain from partial hukou liberalization — growth stays concentrated in sub-provincial hubs.</p>
-    <div class="links"><a href="files/hukou-reform.pdf">PDF</a></div>
+    <h3><a href="https://arxiv.org/abs/2403.13083">UberStable: Formulating the Rideshare System as a Stable Matching Problem</a><span class="tag">Publication</span></h3>
+<p class="meta">R. Acharya, <strong>J. Chen</strong>, H. Xiao · ACM EAAMO · 2024</p>
+<p class="blurb">A rider–driver matching algorithm that maximizes revenue while achieving Pareto optimality for individual driver preferences.</p>
+    <div class="links"><a href="https://arxiv.org/abs/2403.13083">Paper</a><a href="https://github.com/rheaacharya11/uberstable">Code</a></div>
   </article>
 </div>
-<p class="small muted" style="margin-top:1.25rem"><a href="projects.html">All projects and publications →</a></p>
-<!-- 
-<div class="callout">
-<p><strong>Looking for:</strong> research roles in AI safety and biosecurity. The fastest way to reach me is <a href="mailto:jessica@agihouse.org">email</a>.</p>
-</div> -->
+<p class="small muted" style="margin-top:1.25rem"><a href="projects.html">All research →</a></p>
 </main>
 
 <footer class="site">

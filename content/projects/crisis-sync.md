@@ -1,4 +1,5 @@
 ---
+draft: true
 title: CrisisSync — Multi-Agent Disaster Response
 kind: Build
 venue: AI Agents Hackathon — $4,000 first prize

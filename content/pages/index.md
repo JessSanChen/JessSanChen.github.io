@@ -1,32 +1,27 @@
 ---
 title: Jessica Chen
 output: index.html
-description: I work on AI safety and biosecurity — red-teaming, mechanism design, and wet-lab research.
+description: I work on AI x biosecurity: tools and benchmarks for catching AI misuse in the life sciences.
 ---
-
-<!-- Anything in [brackets] is a placeholder or a fact I couldn't verify.
-     Drop a headshot at content/static/portrait.jpg, then run: python3 build.py -->
 
 # Jessica Chen
 
 <img class="portrait" src="files/prof_pic.png" alt="Jessica Chen">
 
-<p class="lede">I work on <strong>AI safety and biosecurity</strong>, coming at both from more than one direction.</p>
+<p class="lede">I work on <strong>AI x biosecurity</strong>: building the tools and benchmarks that catch AI misuse in the life sciences.</p>
 
-Some fun things that I've built and broke: [Spectre](projects/spectre-red-teaming.html), a multi-agent red-teaming system that jailbroke the Air Force Research Lab's LLM and won $25K at Eric Schmidt's hackathon; co-founded a [cybersecurity venture](files/ChenJessica%20Resume.pdf) doing automated red-teaming out of the Belfer Center's QLab accelerator. I also spent too much time on [mechanism design](research.html) for systems whose agents are strategic.
+I'm an AI x Biosecurity Fellow at the [Cambridge Boston Alignment Initiative](https://www.cbai.ai/), where I lead [ASTRAL](https://astral.detection.bio/), an open-source scanner for biological misuse. I own the project's data governance and design partnerships. I'm also first author on a benchmark for AI misuse monitors in dual-use research domains, with co-authors at NIST and RAND. This month I founded and ran the [Boston Biosecurity Hackathon](projects.html#ai-x-biosecurity), a life-sciences expert elicitation study and field-building workshop.
 
-I have also done wet-lab work — including [viral circuit tracing at Georgetown Medical School](projects/sst-neuroanatomy.html) and [neural-interface research](projects/jia-liu-lab.html) in Jia Liu's lab at Harvard. 
+More broadly, I study how AI agents behave when their context changes. [Policy Under Pressure](projects.html#ai-agents-and-evaluation) (under review) is a 13-model, 26,398-episode study of how an agent's tools, its operator-assigned persona, and its peers' reports shape whether it follows rules and reports honestly. Before that I worked on [mechanism design](projects.html#mechanism-design): what learning and allocation systems do when the agents inside them are strategic.
 
-I'm currently Lead Researcher at [AGI House](https://agihouse.org), writing [research briefs](writing.html), [interviewing cool people](https://www.youtube.com/watch?v=v2aVTyCpvCM), and hosting [research spotlights](https://www.youtube.com/watch?v=wOtS8W-_QKs&t=938s) and quarterly [research reading groups](https://blog.agihouse.org/posts/alpamayo-reading-room). Before that, a year in restructuring at Lazard; before that, Harvard — a dual S.M./A.B. in Computer Science, an A.B. in Economics, and teaching fellow for CS 51 (Intermediate Programming), CS 136 (Mechanism Design), and CS 182 (Artificial Intelligence).
+I also have bench experience. In high school I cut brain slices, ran patch-clamp recordings, and did viral circuit tracing at [Georgetown School of Medicine](projects.html#lab-research). At Harvard I rebuilt the [Jia Liu Lab's](projects.html#lab-research) electrophysiology analysis pipeline.
 
-Some other things about me: I was born in Taiwan (and every so often think about the political economics of the Greater China region [[1]](files/hukou-reform.pdf)[[2]](files/cross-strait-brain-drain.pdf)), and I signed up for a marathon recently!
+I'm also Lead Researcher at [AGI House](https://agihouse.org), where I write [research briefs](writing.html), host [podcast interviews](https://www.youtube.com/watch?v=5KQpZPbeq-Q) and paper reading groups, and started the inaugural [Fellows program](https://www.agihouse.org/fellowship). Before that I spent a year as a restructuring analyst at Lazard, usually the sole analyst on a deal. I studied at Harvard, where I earned an S.M./A.B. in Computer Science and an A.B. in Economics and was a teaching fellow for CS 51, CS 136, and CS 182.
+
+Outside work: I was born in Taiwan (and sometimes write about the political economy of the region [[1]](files/hukou-reform.pdf)[[2]](files/cross-strait-brain-drain.pdf)). I also dance, make digital art, ride motorcycles, and free-dive.
 
 ## Selected work
 
 {{selected}}
 
-<p class="small muted" style="margin-top:1.25rem"><a href="projects.html">All projects and publications →</a></p>
-<!-- 
-<div class="callout">
-<p><strong>Looking for:</strong> research roles in AI safety and biosecurity. The fastest way to reach me is <a href="mailto:jessica@agihouse.org">email</a>.</p>
-</div> -->
+<p class="small muted" style="margin-top:1.25rem"><a href="projects.html">All research →</a></p>

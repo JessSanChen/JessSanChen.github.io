@@ -1,4 +1,5 @@
 ---
+draft: true
 title: Mesa Security — Security-First Mobile Virtual Network Operator
 kind: Build
 venue: Personal project

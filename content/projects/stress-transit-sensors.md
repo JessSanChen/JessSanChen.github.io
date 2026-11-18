@@ -1,4 +1,5 @@
 ---
+draft: true
 title: STRESS — Distributed Emergency Detection for Train Platforms
 kind: Build
 venue: CS 262, Harvard
