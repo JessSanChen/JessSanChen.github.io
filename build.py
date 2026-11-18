@@ -267,7 +267,7 @@ def build():
 <p class="meta muted small">{html.escape(" · ".join(meta_bits))}</p>
 <div class="links" style="margin-bottom:1.5rem">{links}</div>"""
         body = header + render_md(p["body"])
-        body += '\n<p class="backlink"><a href="../projects.html">← All projects</a></p>'
+        body += '\n<p class="backlink"><a href="../projects.html">← All research</a></p>'
         (outdir / f"{p['slug']}.html").write_text(
             layout(p.get("title", p["slug"]), body, "projects.html", depth=1,
                    description=p.get("blurb", "")),
