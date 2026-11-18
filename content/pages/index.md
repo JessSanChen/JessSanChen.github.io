@@ -20,7 +20,7 @@ description: I work on AI x biosecurity: tools and benchmarks for catching AI mi
 **Built**
 
 - **[Spectre](https://github.com/JessSanChen/SpectreRedTeaming)**, a multi-agent red-teaming system that jailbroke the Air Force Research Lab's LLM. **$25K first prize**, SCSP × AGI House hackathon.
-- **An [expert elicitation platform](projects/boston-biosecurity-hackathon.html)** for the Boston Biosecurity Hackathon, which I founded. It collected decomposed workflows and dual-use comparison sets and handled peer review, with a full admin console. ~60 people used it at once on event day without a failure.
+- **An [expert elicitation platform](https://www.astralmonitor.org/)** for the Boston Biosecurity Hackathon, which I founded. It collected decomposed workflows and dual-use comparison sets and handled peer review, with a full admin console. ~60 people used it at once on event day without a failure.
 - **[CrisisSync](https://github.com/JessSanChen/CrisisSync)**, multi-agent disaster response. **$4K first prize**, AI Agents Hackathon. [More builds →](projects.html#builds-and-hackathons)
 
 **Background**
